@@ -59,7 +59,7 @@ function check() {
   // VERIFICA SE HÁ UM GANHADOR E EMITE O ALERTA
   for (pos of positions) {
     if (pos.every((item) => items.includes(item))) {
-      alert("O JOGADOR '" + playerLastMove + "' GANHOU!");
+      alert("O VENCEDOR FOI O JOGADOR '" + playerLastMove + "'");
       init();
       return;
     }
@@ -67,7 +67,7 @@ function check() {
 
   // MENSAGEM DE EMPATE
   if (selected.filter((item) => item).length === 9) {
-    alert("DEU EMPATE!");
+    alert("EMPATE!");
     init();
     return;
   }
